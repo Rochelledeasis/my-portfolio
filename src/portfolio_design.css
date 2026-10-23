@@ -1,48 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 html {
-  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-  background-color: black;
+  background: black;
   color: white;
 }
 
 header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 2rem 9%;
-  background-color: transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px 9%;
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 30px;
+  font-weight: bold;
   color: green;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.5s ease;
 }
 
-.logo:hover {
+nav a {
   color: white;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: green;
+}
+
+section {
+  min-height: 100vh;
+  padding: 120px 9% 40px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.home img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid green;
+}
+
+.home h1 {
+  font-size: 50px;
+}
+
+.home h1 span {
+  color: green;
+}
+
+.home h3 {
+  margin: 10px 0;
+}
+
+h2 {
+  color: green;
+  margin-bottom: 20px;
 }

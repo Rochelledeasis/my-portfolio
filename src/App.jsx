@@ -2,39 +2,51 @@ import './portfolio_design.css'
 import pic from './assets/pic.png'
 
 function App() {
+  const goTo = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
       <header>
-        <a href="#" className="logo">Rochelle</a>
-
+        <span className="logo" onClick={() => goTo('home')}>Rochelle</span>
         <nav>
-          <a href="#" className="active">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Education</a>
-          <a href="#">Contact</a>
+          <button onClick={() => goTo('home')}>Home</button>
+          <button onClick={() => goTo('projects')}>Projects</button>
+          <button onClick={() => goTo('education')}>Education</button>
+          <button onClick={() => goTo('contact')}>Contact</button>
         </nav>
       </header>
 
-      <section className="home">
-        <div className="home-img">
-          <img src={pic} alt="Rochelle" />
-        </div>
-
-        <div className="home-content">
+      <section id="home" className="home">
+        <img src={pic} alt="Rochelle" />
+        <div>
           <h1>Hi, I'm <span>Rochelle</span></h1>
-          <h3 className="typing-text">A Front-End Developer</h3>
+          <h3>A Front-End Developer</h3>
           <p>
             Hello, I'm Rochelle, a passionate front-end developer. Looking
             forward to learning and growing in the field.
           </p>
-
-          <div className="social-icons">
-            <a href="#"><i className="fab fa-github"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#"><i className="fab fa-x-twitter"></i></a>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-          </div>
         </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>ALDAY DENTAL CLINIC</p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p>Elementary: FLAVIANO PELAGIA PANTOJA MEMORIAL ELEMENTARY SCHOOL</p>
+        <p>High School: BALAYAN NATIONAL HIGH SCHOOL</p>
+        <p>Senior High School: BALAYAN SENIOR HIGH SCHOOL</p>
+        <p>College:BATANGAS STATE UNIVERSITY </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>09859125613</p>
+        <p>deasisrochelle31@gmail.com</p>
       </section>
     </>
   )
